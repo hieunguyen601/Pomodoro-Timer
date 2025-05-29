@@ -1,0 +1,97 @@
+/* General Body Styles */
+body {
+    /* Use Lato as the primary font for a clean look */
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    min-height: 100vh;      /* Full viewport height */
+    margin: 0;
+    padding: 20px;
+    background-color: #d9baec; /* Dark blue-grey background */
+    color: #ecf0f1;         /* Light off-white text */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    text-align: center;
+}
+
+/* Main Container for the Pomodoro Timer */
+.frame {
+    background-color: #b8a1e8; /* Slightly lighter blue-grey for the container */
+    padding: 40px;
+    border-radius: 15px; /* Slightly rounded corners */
+    box-shadow: 0 15px 30px rgba(5, 1, 8, 0.4); /* Deeper shadow for depth */
+    width: 100%;
+    max-width: 400px; /* Max width for larger screens */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+/* Title Styling */
+.title {
+    font-family: 'Roboto', sans-serif; /* Using Roboto for headings */
+    font-weight: 700; /* Bold */
+    font-size: 2.5em; /* Larger title */
+    margin-bottom: 30px;
+    color: #fcfcfc; /* Accent orange for the title */
+    letter-spacing: 1px;
+}
+
+/* Timer Display */
+.timer {
+    font-family: 'Roboto', sans-serif; /* Roboto for numbers */
+    font-weight: 900; /* Extra bold for timer */
+    font-size: 7em; /* Very large timer display */
+    letter-spacing: 5px; /* Spaced out numbers */
+    margin-bottom: 40px;
+    color: #ecf0f1; /* White for the timer number */
+    /* Add a subtle text shadow for clarity */
+    text-shadow: 0 0 15px rgba(243, 156, 18, 0.3);
+}
+
+button {
+    background-color: #27ae60; /* Green for action */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 15px 30px;
+    margin: 20px 30px; /* Space between buttons */
+    border-radius: 10px; /* More rounded buttons */
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    min-width: 120px; /* Ensure consistent button width */
+}
+
+button:hover {
+    background-color: #229954; /* Darker green on hover */
+    transform: translateY(-3px); /* Lift button slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+button:active {
+    transform: translateY(0); /* Press effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Flatter shadow on press */
+}
+
+@media (max-width: 500px) {
+    .frame {
+        padding: 30px 20px;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .timer {
+        font-size: 5.5em;
+        letter-spacing: 3px;
+    }
+
+    button {
+        display: block; /* Stack buttons vertically */
+        width: calc(100% - 20px); /* Full width with margin */
+        margin: 10px auto; /* Center stacked buttons */
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+}
